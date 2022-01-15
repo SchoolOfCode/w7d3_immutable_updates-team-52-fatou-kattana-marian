@@ -2,8 +2,8 @@
 
 // Immutably add an item to the end of an array
 export function addToEnd(array, item) {
-  const result = [...array, item];
-  return result;
+  const newArr = [...array, item];
+  return newArr;
 }
 
 // Immutably add an item to the beginning of an array
