@@ -14,7 +14,7 @@ describe("addToEnd", function () {
   });
 });
 
-/* describe("addToBeginning", function () {
+/*describe("addToBeginning", function () {
   it("should not mutate the original array", function () {
     const array = ["meanie", "meinie", "moe"];
     const actual = fn.addToBeginning(array, "einie");
@@ -166,5 +166,3 @@ describe("toggleListItemCompleted", function () {
     );
     expect(actual).toEqual(expected);
   });
-});
- */
