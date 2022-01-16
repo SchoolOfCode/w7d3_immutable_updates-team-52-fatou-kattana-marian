@@ -1,6 +1,6 @@
 import * as fn from "./index.js";
 
-describe("addToEnd", function () {
+/* describe("addToEnd", function () {
   it("should not mutate the original array", function () {
     const array = ["duck", "duck", "duck"];
     const actual = fn.addToEnd(array, "GOOSE");
@@ -12,9 +12,9 @@ describe("addToEnd", function () {
     const actual = fn.addToEnd(["duck", "duck", "duck"], "GOOSE");
     expect(actual).toEqual(expected);
   });
-});
+}); */
 
-/*describe("addToBeginning", function () {
+describe("addToBeginning", function () {
   it("should not mutate the original array", function () {
     const array = ["meanie", "meinie", "moe"];
     const actual = fn.addToBeginning(array, "einie");
@@ -28,7 +28,7 @@ describe("addToEnd", function () {
   });
 });
 
-describe("insertItem", function () {
+/* describe("insertItem", function () {
   it("should not mutate the original array", function () {
     const array = ["bread", "cheese", "ham", "bread"];
     const actual = fn.insertItem(array, "lettuce", 1);
@@ -166,3 +166,5 @@ describe("toggleListItemCompleted", function () {
     );
     expect(actual).toEqual(expected);
   });
+});
+ */
