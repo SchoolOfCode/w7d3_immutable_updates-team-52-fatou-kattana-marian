@@ -48,7 +48,11 @@ export function updateName(object, newName) {
 //     toggleTeaStatus({ name: "Abe", needsACupOfTea: false })
 // should give back:
 //     { name: "Abe", needsACupOfTea: true }
-export function toggleTeaStatus(object) {}
+export function toggleTeaStatus(object) {
+  const boolean = object.needsACupOfTea;
+  const newObj = { ...object, needsACupOfTea: !boolean };
+  return newObj;
+}
 
 // Combo Time!!
 

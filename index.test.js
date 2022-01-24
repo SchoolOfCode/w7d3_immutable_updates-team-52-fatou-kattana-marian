@@ -78,13 +78,13 @@ describe("removeItem", function () {
   });
 });
 describe("updateName", function () {
-  it("should not mutate the original object", function () {
+  it.skip("should not mutate the original object", function () {
     const user = { name: "Lambert", age: 99, height: "6ft" };
     const actual = fn.updateName(user, "Lammy");
     expect(user).toEqual({ name: "Lambert", age: 99, height: "6ft" });
     expect(actual).not.toBe(user);
   });
-  it("should updateName", function () {
+  it.skip("should updateName", function () {
     const expected = { name: "Lammy", age: 99, height: "6ft" };
     const actual = fn.updateName(
       { name: "Lambert", age: 99, height: "6ft" },
@@ -95,23 +95,23 @@ describe("updateName", function () {
 });
 
 describe("toggleTeaStatus", function () {
-  it.skip("should not mutate the original object", function () {
+  it("should not mutate the original object", function () {
     const user = { name: "Ben", needsACupOfTea: true };
     const actual = fn.toggleTeaStatus(user);
     expect(user).toEqual({ name: "Ben", needsACupOfTea: true });
     expect(actual).not.toBe(user);
   });
-  it.skip("should toggle tea status to true", function () {
+  it("should toggle tea status to true", function () {
     const expected = { name: "Ben", needsACupOfTea: true };
     const actual = fn.toggleTeaStatus({ name: "Ben", needsACupOfTea: false });
     expect(actual).toEqual(expected);
   });
-  it.skip("should toggle tea status to false", function () {
+  it("should toggle tea status to false", function () {
     const expected = { name: "Ben", needsACupOfTea: false };
     const actual = fn.toggleTeaStatus({ name: "Ben", needsACupOfTea: true });
     expect(actual).toEqual(expected);
   });
-  it.skip("should toggle tea status", function () {
+  it("should toggle tea status", function () {
     const expected = { name: "Ben", needsACupOfTea: true };
     const actual = fn.toggleTeaStatus({ name: "Ben", needsACupOfTea: false });
     expect(actual).toEqual(expected);
