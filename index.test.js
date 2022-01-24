@@ -47,13 +47,13 @@ describe("insertItem", function () {
 });
 
 describe("replaceItem", function () {
-  it("should not mutate the original array", function () {
+  it.skip("should not mutate the original array", function () {
     const array = ["bread", "cheese", "ham", "bread"];
     const actual = fn.replaceItem(array, "chicken", 2);
     expect(array).toEqual(["bread", "cheese", "ham", "bread"]);
     expect(actual).not.toBe(array);
   });
-  it("should replace item", function () {
+  it.skip("should replace item", function () {
     const expected = ["bread", "cheese", "chicken", "bread"];
     const actual = fn.replaceItem(
       ["bread", "cheese", "ham", "bread"],
@@ -65,13 +65,13 @@ describe("replaceItem", function () {
 });
 
 describe("removeItem", function () {
-  it.skip("should not mutate the original array", function () {
+  it("should not mutate the original array", function () {
     const array = ["bread", "cheese", "ham", "bread"];
     const actual = fn.removeItem(array, 1);
     expect(array).toEqual(["bread", "cheese", "ham", "bread"]);
     expect(actual).not.toBe(array);
   });
-  it.skip("should remove item", function () {
+  it("should remove item", function () {
     const expected = ["bread", "ham", "bread"];
     const actual = fn.removeItem(["bread", "cheese", "ham", "bread"], 1);
     expect(actual).toEqual(expected);
