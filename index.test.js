@@ -95,30 +95,31 @@ describe("updateName", function () {
 });
 
 describe("toggleTeaStatus", function () {
-  it("should not mutate the original object", function () {
+  it.skip("should not mutate the original object", function () {
     const user = { name: "Ben", needsACupOfTea: true };
     const actual = fn.toggleTeaStatus(user);
     expect(user).toEqual({ name: "Ben", needsACupOfTea: true });
     expect(actual).not.toBe(user);
   });
-  it("should toggle tea status to true", function () {
+  it.skip("should toggle tea status to true", function () {
     const expected = { name: "Ben", needsACupOfTea: true };
     const actual = fn.toggleTeaStatus({ name: "Ben", needsACupOfTea: false });
     expect(actual).toEqual(expected);
   });
-  it("should toggle tea status to false", function () {
+  it.skip("should toggle tea status to false", function () {
     const expected = { name: "Ben", needsACupOfTea: false };
     const actual = fn.toggleTeaStatus({ name: "Ben", needsACupOfTea: true });
     expect(actual).toEqual(expected);
   });
-  it("should toggle tea status", function () {
+  it.skip("should toggle tea status", function () {
     const expected = { name: "Ben", needsACupOfTea: true };
     const actual = fn.toggleTeaStatus({ name: "Ben", needsACupOfTea: false });
     expect(actual).toEqual(expected);
   });
 });
+
 describe("toggleListItemCompleted", function () {
-  it.skip("should not mutate the original array or nested object", function () {
+  it("should not mutate the original array or nested object", function () {
     const index = 0;
     const list = [
       { task: "Do washing up", completed: false },
@@ -134,7 +135,7 @@ describe("toggleListItemCompleted", function () {
     expect(actual).not.toBe(list);
     expect(actual[index]).not.toBe(list[index]);
   });
-  it.skip("should toggle completed to true", function () {
+  it("should toggle completed to true", function () {
     const expected = [
       { task: "Do washing up", completed: true },
       { task: "Do code wars", completed: false },
@@ -150,7 +151,7 @@ describe("toggleListItemCompleted", function () {
     );
     expect(actual).toEqual(expected);
   });
-  it.skip("should toggle completed to false", function () {
+  it("should toggle completed to false", function () {
     const expected = [
       { task: "Do washing up", completed: false },
       { task: "Do code wars", completed: false },

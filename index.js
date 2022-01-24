@@ -56,10 +56,20 @@ export function toggleTeaStatus(object) {
 
 // Combo Time!!
 
-// Immutably update the array as well as the object at the given position/index within the array, so that the value under the "completed" property becomes the opposite of what it was.
+// Immutably update the array as well as the object at the given position/index within the array,
+//so that the value under the "completed" property becomes the opposite of what it was.
 // Any other properties in the object should be maintained.
 // For example calling:
 //    toggleListItemCompleted([{ task: "Cooking", completed: true }, { task: "Walking", completed: false }], 1)
 // should give back:
 //    [{ task: "Cooking", completed: true }, { task: "Walking", completed: true }]
-export function toggleListItemCompleted(array, index) {}
+export function toggleListItemCompleted(array, index) {
+  const boolean = array[index].completed;
+
+  const newArr = [
+    ...array.slice(0, index),
+    { ...array[index], completed: !boolean },
+    ...array.slice(index + 1),
+  ];
+  return newArr;
+}
