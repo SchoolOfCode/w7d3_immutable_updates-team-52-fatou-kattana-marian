@@ -19,7 +19,10 @@ export function insertItem(array, item, index) {
 }
 
 // Immutably replace an item at a specific position/index within an array
-export function replaceItem(array, item, index) {}
+export function replaceItem(array, item, index) {
+  const newArr = [...array.slice(0, index), item, ...array.slice(index + 1)];
+  return newArr;
+}
 
 // Immutably remove an item at a specific position/index within an array
 export function removeItem(array, index) {}
