@@ -1,34 +1,34 @@
 import * as fn from "./index.js";
 
-/* describe("addToEnd", function () {
-  it("should not mutate the original array", function () {
+describe("addToEnd", function () {
+  it.skip("should not mutate the original array", function () {
     const array = ["duck", "duck", "duck"];
     const actual = fn.addToEnd(array, "GOOSE");
     expect(array).toEqual(["duck", "duck", "duck"]);
     expect(actual).not.toBe(array);
   });
-  it("should add item to the end", function () {
+  it.skip("should add item to the end", function () {
     const expected = ["duck", "duck", "duck", "GOOSE"];
     const actual = fn.addToEnd(["duck", "duck", "duck"], "GOOSE");
     expect(actual).toEqual(expected);
   });
-}); */
+});
 
 describe("addToBeginning", function () {
-  it("should not mutate the original array", function () {
+  it.skip("should not mutate the original array", function () {
     const array = ["meanie", "meinie", "moe"];
     const actual = fn.addToBeginning(array, "einie");
     expect(array).toEqual(["meanie", "meinie", "moe"]);
     expect(actual).not.toBe(array);
   });
-  it("should add item to the beginning", function () {
+  it.skip("should add item to the beginning", function () {
     const expected = ["einie", "meanie", "meinie", "moe"];
     const actual = fn.addToBeginning(["meanie", "meinie", "moe"], "einie");
     expect(actual).toEqual(expected);
   });
 });
 
-/* describe("insertItem", function () {
+describe("insertItem", function () {
   it("should not mutate the original array", function () {
     const array = ["bread", "cheese", "ham", "bread"];
     const actual = fn.insertItem(array, "lettuce", 1);
@@ -47,13 +47,13 @@ describe("addToBeginning", function () {
 });
 
 describe("replaceItem", function () {
-  it("should not mutate the original array", function () {
+  it.skip("should not mutate the original array", function () {
     const array = ["bread", "cheese", "ham", "bread"];
     const actual = fn.replaceItem(array, "chicken", 2);
     expect(array).toEqual(["bread", "cheese", "ham", "bread"]);
     expect(actual).not.toBe(array);
   });
-  it("should replace item", function () {
+  it.skip("should replace item", function () {
     const expected = ["bread", "cheese", "chicken", "bread"];
     const actual = fn.replaceItem(
       ["bread", "cheese", "ham", "bread"],
@@ -65,26 +65,26 @@ describe("replaceItem", function () {
 });
 
 describe("removeItem", function () {
-  it("should not mutate the original array", function () {
+  it.skip("should not mutate the original array", function () {
     const array = ["bread", "cheese", "ham", "bread"];
     const actual = fn.removeItem(array, 1);
     expect(array).toEqual(["bread", "cheese", "ham", "bread"]);
     expect(actual).not.toBe(array);
   });
-  it("should remove item", function () {
+  it.skip("should remove item", function () {
     const expected = ["bread", "ham", "bread"];
     const actual = fn.removeItem(["bread", "cheese", "ham", "bread"], 1);
     expect(actual).toEqual(expected);
   });
 });
 describe("updateName", function () {
-  it("should not mutate the original object", function () {
+  it.skip("should not mutate the original object", function () {
     const user = { name: "Lambert", age: 99, height: "6ft" };
     const actual = fn.updateName(user, "Lammy");
     expect(user).toEqual({ name: "Lambert", age: 99, height: "6ft" });
     expect(actual).not.toBe(user);
   });
-  it("should updateName", function () {
+  it.skip("should updateName", function () {
     const expected = { name: "Lammy", age: 99, height: "6ft" };
     const actual = fn.updateName(
       { name: "Lambert", age: 99, height: "6ft" },
@@ -95,30 +95,30 @@ describe("updateName", function () {
 });
 
 describe("toggleTeaStatus", function () {
-  it("should not mutate the original object", function () {
+  it.skip("should not mutate the original object", function () {
     const user = { name: "Ben", needsACupOfTea: true };
     const actual = fn.toggleTeaStatus(user);
     expect(user).toEqual({ name: "Ben", needsACupOfTea: true });
     expect(actual).not.toBe(user);
   });
-  it("should toggle tea status to true", function () {
+  it.skip("should toggle tea status to true", function () {
     const expected = { name: "Ben", needsACupOfTea: true };
     const actual = fn.toggleTeaStatus({ name: "Ben", needsACupOfTea: false });
     expect(actual).toEqual(expected);
   });
-  it("should toggle tea status to false", function () {
+  it.skip("should toggle tea status to false", function () {
     const expected = { name: "Ben", needsACupOfTea: false };
     const actual = fn.toggleTeaStatus({ name: "Ben", needsACupOfTea: true });
     expect(actual).toEqual(expected);
   });
-  it("should toggle tea status", function () {
+  it.skip("should toggle tea status", function () {
     const expected = { name: "Ben", needsACupOfTea: true };
     const actual = fn.toggleTeaStatus({ name: "Ben", needsACupOfTea: false });
     expect(actual).toEqual(expected);
   });
 });
 describe("toggleListItemCompleted", function () {
-  it("should not mutate the original array or nested object", function () {
+  it.skip("should not mutate the original array or nested object", function () {
     const index = 0;
     const list = [
       { task: "Do washing up", completed: false },
@@ -134,7 +134,7 @@ describe("toggleListItemCompleted", function () {
     expect(actual).not.toBe(list);
     expect(actual[index]).not.toBe(list[index]);
   });
-  it("should toggle completed to true", function () {
+  it.skip("should toggle completed to true", function () {
     const expected = [
       { task: "Do washing up", completed: true },
       { task: "Do code wars", completed: false },
@@ -150,7 +150,7 @@ describe("toggleListItemCompleted", function () {
     );
     expect(actual).toEqual(expected);
   });
-  it("should toggle completed to false", function () {
+  it.skip("should toggle completed to false", function () {
     const expected = [
       { task: "Do washing up", completed: false },
       { task: "Do code wars", completed: false },
@@ -167,4 +167,3 @@ describe("toggleListItemCompleted", function () {
     expect(actual).toEqual(expected);
   });
 });
- */
